@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  mail:
+    build: .
+    image: zzci/empty
+    container_name: empty
+    restart: unless-stopped
+    volumes:
+      - ./work:/work
+    ports:
+      - "8080:8080"
